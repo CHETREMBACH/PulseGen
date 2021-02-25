@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="VisualGDB settings">
+      <UniqueIdentifier>{064b9696-f14d-4f98-91d0-d8bb5f878d66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities">
+      <UniqueIdentifier>{405e3972-1007-4acf-a1bd-c6adf87ea532}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\CRC">
+      <UniqueIdentifier>{9cef8c93-ce07-4614-bcb6-8369a5c23cdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\hal_board">
+      <UniqueIdentifier>{af4dc4eb-b64c-4327-9c5b-f2016ec8e031}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\uart_dbg">
+      <UniqueIdentifier>{cd6cb653-6ee8-47a3-95bc-d31d2c5060e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Progect">
+      <UniqueIdentifier>{a0f96a95-cc9c-4a03-a9d6-bb62490d0824}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Progect\Source">
+      <UniqueIdentifier>{04b438be-b65b-4dc5-83e9-96cb5a6cf001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Progect\Include">
+      <UniqueIdentifier>{cb3c36d1-b0ff-42a9-9222-c464a2f07a53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Progect\Config">
+      <UniqueIdentifier>{44e8195e-9f8a-40ae-bb20-605d9c0d00cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries">
+      <UniqueIdentifier>{25a73ce8-1405-4db5-9b78-7692dba4c3dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\STM32F10x_StdPeriph_Driver">
+      <UniqueIdentifier>{869485c5-4a46-4fb8-9784-bed92c3350a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\STM32F10x_StdPeriph_Driver\src">
+      <UniqueIdentifier>{cf6824b6-8e85-41cd-aadc-f7fa693531f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\STM32F10x_StdPeriph_Driver\inc">
+      <UniqueIdentifier>{11b686e5-03b5-4f78-be79-57e334a6d40f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\CMSIS">
+      <UniqueIdentifier>{12747041-7bc4-48ef-816f-867115f963b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\CMSIS\CoreSupport">
+      <UniqueIdentifier>{08644c91-4c8d-4e10-914a-49244bf6dc3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\CMSIS\DeviceSupport">
+      <UniqueIdentifier>{0cda75e9-54a4-47d5-a382-a4c0d4664fd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\CMSIS\DeviceSupport\ST">
+      <UniqueIdentifier>{84949eba-dcdd-4f33-a081-8f75463c6ba9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\CMSIS\DeviceSupport\ST\STM32F10x">
+      <UniqueIdentifier>{eaf758e9-ba04-4f68-94f4-af172cb28ecb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\FreeRTOS-Kernel">
+      <UniqueIdentifier>{9848b9a1-60f5-42aa-8739-8a3773817991}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\FreeRTOS-Kernel\include">
+      <UniqueIdentifier>{72bbb093-121a-46ee-80d2-8198b700b01b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\FreeRTOS-Kernel\portable">
+      <UniqueIdentifier>{483e54b0-060f-4792-90c9-204fa3530eeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\FreeRTOS-Kernel\portable\GCC">
+      <UniqueIdentifier>{92bfad1d-9b5d-488a-8a1f-e3bd16c857e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\FreeRTOS-Kernel\portable\GCC\ARM_CM3">
+      <UniqueIdentifier>{8574e7c5-298b-4cc9-bcbb-2810a501b36e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\FreeRTOS-Kernel\portable\MemMang">
+      <UniqueIdentifier>{4180ccc6-8d92-4d22-a648-a1b25dabda93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\CMSIS\FreeRTOS-Kernel">
+      <UniqueIdentifier>{c40ed771-e6af-4874-9677-a9d11dff3b5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\CMSIS\FreeRTOS-Kernel\include">
+      <UniqueIdentifier>{cff3076d-d5ff-4d12-aed9-c805ef8ee207}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\cmd_trmnl">
+      <UniqueIdentifier>{7e41b153-f151-4d7f-a2c3-a3ccd00e3c1f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="stm32.xml">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <ClCompile Include="Utilities\CRC\CRC16.c">
+      <Filter>Utilities\CRC</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\hal_board\board.c">
+      <Filter>Utilities\hal_board</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\uart_dbg\printf_dbg.c">
+      <Filter>Utilities\uart_dbg</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\uart_dbg\uart_dbg.c">
+      <Filter>Utilities\uart_dbg</Filter>
+    </ClCompile>
+    <None Include="stm32.props">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PulseGen-Release.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="PulseGen-Debug.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Utilities\CRC\CRC16.h">
+      <Filter>Utilities\CRC</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\hal_board\board.h">
+      <Filter>Utilities\hal_board</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\uart_dbg\printf_dbg.h">
+      <Filter>Utilities\uart_dbg</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\uart_dbg\uart_dbg.h">
+      <Filter>Utilities\uart_dbg</Filter>
+    </ClInclude>
+    <ClInclude Include="Progect\Include\main.h">
+      <Filter>Progect\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Progect\Include\stm32_it.h">
+      <Filter>Progect\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_bkp.h">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_can.h">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_cec.h">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_crc.h">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dac.h">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dbgmcu.h">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_flash.h">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_fsmc.h">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_i2c.h">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_iwdg.h">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_pwr.h">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rtc.h">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\CMSIS\CM3\CoreSupport\core_cm3.h">
+      <Filter>Libraries\CMSIS\CoreSupport</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h">
+      <Filter>Libraries\CMSIS\DeviceSupport\ST\STM32F10x</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h">
+      <Filter>Libraries\CMSIS\DeviceSupport\ST\STM32F10x</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\atomic.h">
+      <Filter>Libraries\FreeRTOS-Kernel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\croutine.h">
+      <Filter>Libraries\FreeRTOS-Kernel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\deprecated_definitions.h">
+      <Filter>Libraries\FreeRTOS-Kernel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\event_groups.h">
+      <Filter>Libraries\FreeRTOS-Kernel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\FreeRTOS.h">
+      <Filter>Libraries\FreeRTOS-Kernel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\list.h">
+      <Filter>Libraries\FreeRTOS-Kernel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\message_buffer.h">
+      <Filter>Libraries\FreeRTOS-Kernel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\mpu_prototypes.h">
+      <Filter>Libraries\FreeRTOS-Kernel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\mpu_wrappers.h">
+      <Filter>Libraries\FreeRTOS-Kernel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\portable.h">
+      <Filter>Libraries\FreeRTOS-Kernel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\projdefs.h">
+      <Filter>Libraries\FreeRTOS-Kernel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\queue.h">
+      <Filter>Libraries\FreeRTOS-Kernel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\semphr.h">
+      <Filter>Libraries\FreeRTOS-Kernel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\StackMacros.h">
+      <Filter>Libraries\FreeRTOS-Kernel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\stack_macros.h">
+      <Filter>Libraries\FreeRTOS-Kernel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\stream_buffer.h">
+      <Filter>Libraries\FreeRTOS-Kernel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\task.h">
+      <Filter>Libraries\FreeRTOS-Kernel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\timers.h">
+      <Filter>Libraries\FreeRTOS-Kernel\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\portable\GCC\ARM_CM3\portmacro.h">
+      <Filter>Libraries\FreeRTOS-Kernel\portable\GCC\ARM_CM3</Filter>
+    </ClInclude>
+    <ClInclude Include="Progect\Include\hooks.h">
+      <Filter>Progect\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\cmd_trmnl\cmd_freertos_cntrl.h">
+      <Filter>Utilities\cmd_trmnl</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\cmd_trmnl\cmd_hdl.h">
+      <Filter>Utilities\cmd_trmnl</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\cmd_trmnl\cmd_hlp.h">
+      <Filter>Utilities\cmd_trmnl</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\cmd_trmnl\cmd_process.h">
+      <Filter>Utilities\cmd_trmnl</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\uart_dbg\pin_dbg.h">
+      <Filter>Utilities\uart_dbg</Filter>
+    </ClInclude>
+    <ClInclude Include="Progect\Config\FreeRTOSConfig.h">
+      <Filter>Progect\Config</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Progect\Source\main.c">
+      <Filter>Progect\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Progect\Source\stm32_it.c">
+      <Filter>Progect\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\misc.c">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.c">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.c">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.c">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.c">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.c">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.c">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.c">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.c">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.c">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.c">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.c">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.c">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.c">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.c">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.c">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.c">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.c">
+      <Filter>Libraries\STM32F10x_StdPeriph_Driver\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\CMSIS\CM3\CoreSupport\core_cm3.c">
+      <Filter>Libraries\CMSIS\CoreSupport</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.c">
+      <Filter>Libraries\CMSIS\DeviceSupport\ST\STM32F10x</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\FreeRTOS-Kernel\croutine.c">
+      <Filter>Libraries\FreeRTOS-Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\FreeRTOS-Kernel\event_groups.c">
+      <Filter>Libraries\FreeRTOS-Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\FreeRTOS-Kernel\list.c">
+      <Filter>Libraries\FreeRTOS-Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\FreeRTOS-Kernel\queue.c">
+      <Filter>Libraries\FreeRTOS-Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\FreeRTOS-Kernel\stream_buffer.c">
+      <Filter>Libraries\FreeRTOS-Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\FreeRTOS-Kernel\tasks.c">
+      <Filter>Libraries\FreeRTOS-Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\FreeRTOS-Kernel\timers.c">
+      <Filter>Libraries\FreeRTOS-Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\FreeRTOS-Kernel\portable\GCC\ARM_CM3\port.c">
+      <Filter>Libraries\FreeRTOS-Kernel\portable\GCC\ARM_CM3</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\FreeRTOS-Kernel\portable\MemMang\heap_2.c">
+      <Filter>Libraries\FreeRTOS-Kernel\portable\MemMang</Filter>
+    </ClCompile>
+    <ClCompile Include="Progect\Source\hooks.c">
+      <Filter>Progect\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Progect\Source\startup_stm32f103xb.c">
+      <Filter>Progect\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\cmd_trmnl\cmd_freertos_cntrl.c">
+      <Filter>Utilities\cmd_trmnl</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\cmd_trmnl\cmd_hdl.c">
+      <Filter>Utilities\cmd_trmnl</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\cmd_trmnl\cmd_hlp.c">
+      <Filter>Utilities\cmd_trmnl</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\cmd_trmnl\cmd_process.c">
+      <Filter>Utilities\cmd_trmnl</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\uart_dbg\pin_dbg.c">
+      <Filter>Utilities\uart_dbg</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

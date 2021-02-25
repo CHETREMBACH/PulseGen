@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|VisualGDB">
+      <Configuration>Debug</Configuration>
+      <Platform>VisualGDB</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|VisualGDB">
+      <Configuration>Release</Configuration>
+      <Platform>VisualGDB</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{A85EC7BA-07DB-4856-9106-0D624F5BC50A}</ProjectGuid>
+    <BSP_ID>com.sysprogs.arm.stm32</BSP_ID>
+    <BSP_VERSION>2020.10</BSP_VERSION>
+    <ProjectName>PulseGen</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <GNUConfigurationType>Debug</GNUConfigurationType>
+    <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+    <ToolchainVersion>9.3.1/9.2.0/r2</ToolchainVersion>
+    <MCUPropertyListFile>$(ProjectDir)stm32.props</MCUPropertyListFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+    <ToolchainVersion>9.3.1/9.2.0/r2</ToolchainVersion>
+    <MCUPropertyListFile>$(ProjectDir)stm32.props</MCUPropertyListFile>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <ClCompile>
+      <CLanguageStandard>C11</CLanguageStandard>
+      <AdditionalIncludeDirectories>Utilities/cmd_hndlr;Utilities/CRC;Utilities/hal_board;Utilities/uart_dbg;Progect/Include;Libraries/STM32F10x_StdPeriph_Driver/inc;Libraries/CMSIS/Device/ST/STM32F10x/Include;Libraries/CMSIS/CM3/CoreSupport;Libraries/CMSIS/CM3/DeviceSupport/ST/STM32F10x;Progect/Config;Libraries/FreeRTOS-Kernel/include;Libraries/FreeRTOS-Kernel/portable/GCC/ARM_CM3;Utilities/cmd_trmnl;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>STM32F10X_MD;DBG_UART_ENABLE=1;DBG_PIN_ENABLE=1;DEBUG=1;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions />
+      <CPPLanguageStandard />
+    </ClCompile>
+    <Link>
+      <LibrarySearchDirectories>%(Link.LibrarySearchDirectories)</LibrarySearchDirectories>
+      <AdditionalLibraryNames>%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
+      <AdditionalLinkerInputs>%(Link.AdditionalLinkerInputs)</AdditionalLinkerInputs>
+      <LinkerScript />
+      <AdditionalOptions />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <ClCompile>
+      <CLanguageStandard>C11</CLanguageStandard>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="Libraries\CMSIS\CM3\CoreSupport\core_cm3.c" />
+    <ClCompile Include="Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.c" />
+    <ClCompile Include="Libraries\FreeRTOS-Kernel\croutine.c" />
+    <ClCompile Include="Libraries\FreeRTOS-Kernel\event_groups.c" />
+    <ClCompile Include="Libraries\FreeRTOS-Kernel\list.c" />
+    <ClCompile Include="Libraries\FreeRTOS-Kernel\portable\GCC\ARM_CM3\port.c" />
+    <ClCompile Include="Libraries\FreeRTOS-Kernel\portable\MemMang\heap_2.c" />
+    <ClCompile Include="Libraries\FreeRTOS-Kernel\queue.c" />
+    <ClCompile Include="Libraries\FreeRTOS-Kernel\stream_buffer.c" />
+    <ClCompile Include="Libraries\FreeRTOS-Kernel\tasks.c" />
+    <ClCompile Include="Libraries\FreeRTOS-Kernel\timers.c" />
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\misc.c" />
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.c" />
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.c" />
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.c" />
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.c" />
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.c" />
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.c" />
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.c" />
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.c" />
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.c" />
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.c" />
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" />
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.c" />
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.c" />
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.c" />
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" />
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.c" />
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.c" />
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.c" />
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" />
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" />
+    <ClCompile Include="Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.c" />
+    <ClCompile Include="Progect\Source\hooks.c" />
+    <ClCompile Include="Progect\Source\main.c" />
+    <ClCompile Include="Progect\Source\startup_stm32f103xb.c" />
+    <ClCompile Include="Progect\Source\stm32_it.c" />
+    <ClCompile Include="Utilities\cmd_trmnl\cmd_freertos_cntrl.c" />
+    <ClCompile Include="Utilities\cmd_trmnl\cmd_hdl.c" />
+    <ClCompile Include="Utilities\cmd_trmnl\cmd_hlp.c" />
+    <ClCompile Include="Utilities\cmd_trmnl\cmd_process.c" />
+    <ClCompile Include="Utilities\CRC\CRC16.c" />
+    <ClCompile Include="Utilities\hal_board\board.c" />
+    <ClCompile Include="Utilities\uart_dbg\pin_dbg.c" />
+    <ClCompile Include="Utilities\uart_dbg\printf_dbg.c" />
+    <ClCompile Include="Utilities\uart_dbg\uart_dbg.c" />
+    <ClInclude Include="Libraries\CMSIS\CM3\CoreSupport\core_cm3.h" />
+    <ClInclude Include="Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h" />
+    <ClInclude Include="Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h" />
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\atomic.h" />
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\croutine.h" />
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\deprecated_definitions.h" />
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\event_groups.h" />
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\FreeRTOS.h" />
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\list.h" />
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\message_buffer.h" />
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\mpu_prototypes.h" />
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\mpu_wrappers.h" />
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\portable.h" />
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\projdefs.h" />
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\queue.h" />
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\semphr.h" />
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\StackMacros.h" />
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\stack_macros.h" />
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\stream_buffer.h" />
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\task.h" />
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\include\timers.h" />
+    <ClInclude Include="Libraries\FreeRTOS-Kernel\portable\GCC\ARM_CM3\portmacro.h" />
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h" />
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h" />
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_bkp.h" />
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_can.h" />
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_cec.h" />
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_crc.h" />
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dac.h" />
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dbgmcu.h" />
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_dma.h" />
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h" />
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_flash.h" />
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_fsmc.h" />
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h" />
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_i2c.h" />
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_iwdg.h" />
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_pwr.h" />
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h" />
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rtc.h" />
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_sdio.h" />
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h" />
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h" />
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h" />
+    <ClInclude Include="Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h" />
+    <ClInclude Include="Progect\Config\FreeRTOSConfig.h" />
+    <ClInclude Include="Progect\Include\hooks.h" />
+    <ClInclude Include="Progect\Include\main.h" />
+    <ClInclude Include="Progect\Include\stm32_it.h" />
+    <ClInclude Include="Utilities\cmd_trmnl\cmd_freertos_cntrl.h" />
+    <ClInclude Include="Utilities\cmd_trmnl\cmd_hdl.h" />
+    <ClInclude Include="Utilities\cmd_trmnl\cmd_hlp.h" />
+    <ClInclude Include="Utilities\cmd_trmnl\cmd_process.h" />
+    <ClInclude Include="Utilities\CRC\CRC16.h" />
+    <ClInclude Include="Utilities\hal_board\board.h" />
+    <ClInclude Include="Utilities\uart_dbg\pin_dbg.h" />
+    <ClInclude Include="Utilities\uart_dbg\printf_dbg.h" />
+    <ClInclude Include="Utilities\uart_dbg\uart_dbg.h" />
+    <None Include="stm32.props" />
+    <None Include="PulseGen-Debug.vgdbsettings" />
+    <None Include="PulseGen-Release.vgdbsettings" />
+    <None Include="stm32.xml" />
+  </ItemGroup>
+</Project>
