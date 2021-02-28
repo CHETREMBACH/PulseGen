@@ -67,7 +67,7 @@ void vConfigureTimerForRunTimeStats(void)
 	
 	    RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM4, ENABLE);
         TIM_TimeBaseStructInit(&timer);
-	    timer.TIM_Prescaler = 3600 - 1;
+	    timer.TIM_Prescaler = 2500 - 1;
         timer.TIM_Period = 0xFFFF;
         TIM_TimeBaseInit(TIM4, &timer);
 	
