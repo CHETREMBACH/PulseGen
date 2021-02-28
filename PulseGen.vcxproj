@@ -42,7 +42,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
     <ClCompile>
       <CLanguageStandard>C11</CLanguageStandard>
-      <AdditionalIncludeDirectories>Utilities/cmd_hndlr;Utilities/CRC;Utilities/hal_board;Utilities/uart_dbg;Progect/Include;Libraries/STM32F10x_StdPeriph_Driver/inc;Libraries/CMSIS/Device/ST/STM32F10x/Include;Libraries/CMSIS/CM3/CoreSupport;Libraries/CMSIS/CM3/DeviceSupport/ST/STM32F10x;Progect/Config;Libraries/FreeRTOS-Kernel/include;Libraries/FreeRTOS-Kernel/portable/GCC/ARM_CM3;Utilities/cmd_trmnl;Utilities/pulse_drv;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Utilities/cmd_hndlr;Utilities/CRC;Utilities/hal_board;Utilities/uart_dbg;Progect/Include;Libraries/STM32F10x_StdPeriph_Driver/inc;Libraries/CMSIS/Device/ST/STM32F10x/Include;Libraries/CMSIS/CM3/CoreSupport;Libraries/CMSIS/CM3/DeviceSupport/ST/STM32F10x;Progect/Config;Libraries/FreeRTOS-Kernel/include;Libraries/FreeRTOS-Kernel/portable/GCC/ARM_CM3;Utilities/cmd_trmnl;Utilities/pulse_drv;Utilities/indic_drv;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>STM32F10X_MD;HSE_VALUE=10000000;DBG_UART_ENABLE=1;DBG_PIN_ENABLE=1;DEBUG=1;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions />
       <CPPLanguageStandard />
@@ -107,6 +107,7 @@
     <ClCompile Include="Utilities\cmd_trmnl\cmd_process.c" />
     <ClCompile Include="Utilities\CRC\CRC16.c" />
     <ClCompile Include="Utilities\hal_board\board.c" />
+    <ClCompile Include="Utilities\indic_drv\indic_drv.c" />
     <ClCompile Include="Utilities\pulse_drv\pulse_drv.c" />
     <ClCompile Include="Utilities\uart_dbg\pin_dbg.c" />
     <ClCompile Include="Utilities\uart_dbg\printf_dbg.c" />
@@ -166,6 +167,7 @@
     <ClInclude Include="Utilities\cmd_trmnl\cmd_process.h" />
     <ClInclude Include="Utilities\CRC\CRC16.h" />
     <ClInclude Include="Utilities\hal_board\board.h" />
+    <ClInclude Include="Utilities\indic_drv\indic_drv.h" />
     <ClInclude Include="Utilities\pulse_drv\pulse_drv.h" />
     <ClInclude Include="Utilities\uart_dbg\pin_dbg.h" />
     <ClInclude Include="Utilities\uart_dbg\printf_dbg.h" />

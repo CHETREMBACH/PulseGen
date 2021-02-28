@@ -85,6 +85,9 @@
     <Filter Include="Utilities\pulse_drv">
       <UniqueIdentifier>{23a2b7f7-1676-451b-8f78-422acfa1525c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Utilities\indic_drv">
+      <UniqueIdentifier>{dafaa0a6-da3b-4802-9f8d-b0f0ea6923ea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="stm32.xml">
@@ -292,6 +295,9 @@
     <ClInclude Include="Utilities\pulse_drv\pulse_drv.h">
       <Filter>Utilities\pulse_drv</Filter>
     </ClInclude>
+    <ClInclude Include="Utilities\indic_drv\indic_drv.h">
+      <Filter>Utilities\indic_drv</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Progect\Source\main.c">
@@ -422,6 +428,9 @@
     </ClCompile>
     <ClCompile Include="Progect\Config\system_stm32f10x.c">
       <Filter>Progect\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\indic_drv\indic_drv.c">
+      <Filter>Utilities\indic_drv</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

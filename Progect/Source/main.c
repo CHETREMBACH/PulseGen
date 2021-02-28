@@ -20,6 +20,7 @@
 #include "printf_dbg.h"
 #include "cmd_process.h"
 #include "pin_dbg.h"
+#include "indic_drv.h"
 #include "pulse_drv.h"
 #include <stdio.h>
 
@@ -63,6 +64,9 @@ void system_thread(void *arg)
 	/* Запуск задачи контроля платы */
 	xTaskCreate(board_task, "BOARD", configMINIMAL_STACK_SIZE, NULL, TreadPrioNormal, NULL);
   
+	/* Configures Indic.*/
+	Indic_Init();	
+	
 	/* Configures GPIO / Timer.*/
 	Pulse_Init();
 	
