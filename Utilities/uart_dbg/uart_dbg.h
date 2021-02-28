@@ -30,23 +30,42 @@
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
 
-/* USART1 описание аппаратных ресурсов отладки */
+///* USART1 описание аппаратных ресурсов отладки */
+////========== Определение ресурсов UART =========================================
+//#define DBG_PORT                         USART1
+//#define DBG_CLK                          RCC_APB2Periph_USART1
+//#define DBG_CLK_CMD                      RCC_APB2PeriphClockCmd
+//  
+//#define DBG_TX_PIN                       GPIO_Pin_9    //PA.9            
+//#define DBG_TX_GPIO_PORT                 GPIOA                       
+//#define DBG_TX_GPIO_CLK                  RCC_APB2Periph_GPIOA
+//  
+//#define DBG_RX_PIN                       GPIO_Pin_10   //PA.10                
+//#define DBG_RX_GPIO_PORT                 GPIOA                    
+//#define DBG_RX_GPIO_CLK                  RCC_APB2Periph_GPIOA
+//  
+//#define DBG_IRQn                         USART1_IRQn
+//#define DBG_IRQHandler                   USART1_IRQHandler	
+///* ===========================================================================*/
+
+/* USART3 описание аппаратных ресурсов отладки */
 //========== Определение ресурсов UART =========================================
-#define DBG_PORT                         USART1
-#define DBG_CLK                          RCC_APB2Periph_USART1
-#define DBG_CLK_CMD                      RCC_APB2PeriphClockCmd
+#define DBG_PORT                         USART3
+#define DBG_CLK                          RCC_APB1Periph_USART3
+#define DBG_CLK_CMD                      RCC_APB1PeriphClockCmd
   
-#define DBG_TX_PIN                       GPIO_Pin_9    //PA.9            
-#define DBG_TX_GPIO_PORT                 GPIOA                       
-#define DBG_TX_GPIO_CLK                  RCC_APB2Periph_GPIOA
+#define DBG_TX_PIN                       GPIO_Pin_10    //PB.10            
+#define DBG_TX_GPIO_PORT                 GPIOB                       
+#define DBG_TX_GPIO_CLK                  RCC_APB2Periph_GPIOB
   
-#define DBG_RX_PIN                       GPIO_Pin_10   //PA.10                
-#define DBG_RX_GPIO_PORT                 GPIOA                    
-#define DBG_RX_GPIO_CLK                  RCC_APB2Periph_GPIOA
+#define DBG_RX_PIN                       GPIO_Pin_11   //PB.11                
+#define DBG_RX_GPIO_PORT                 GPIOB                    
+#define DBG_RX_GPIO_CLK                  RCC_APB2Periph_GPIOB
   
-#define DBG_IRQn                         USART1_IRQn
-#define DBG_IRQHandler                   USART1_IRQHandler	
+#define DBG_IRQn                         USART3_IRQn
+#define DBG_IRQHandler                   USART3_IRQHandler	
 /* ===========================================================================*/
+
 /* Битовая скорость UART                   */
 #define DBG_BaudRate     	     921600 //38400  // 2625000 // 5250000 // 
 /* Размер буфера диагностических сообщений */

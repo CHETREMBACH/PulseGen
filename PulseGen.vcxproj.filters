@@ -82,6 +82,9 @@
     <Filter Include="Utilities\cmd_trmnl">
       <UniqueIdentifier>{7e41b153-f151-4d7f-a2c3-a3ccd00e3c1f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Utilities\pulse_drv">
+      <UniqueIdentifier>{23a2b7f7-1676-451b-8f78-422acfa1525c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="stm32.xml">
@@ -286,6 +289,9 @@
     <ClInclude Include="Progect\Config\FreeRTOSConfig.h">
       <Filter>Progect\Config</Filter>
     </ClInclude>
+    <ClInclude Include="Utilities\pulse_drv\pulse_drv.h">
+      <Filter>Utilities\pulse_drv</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Progect\Source\main.c">
@@ -413,6 +419,9 @@
     </ClCompile>
     <ClCompile Include="Utilities\uart_dbg\pin_dbg.c">
       <Filter>Utilities\uart_dbg</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\pulse_drv\pulse_drv.c">
+      <Filter>Utilities\pulse_drv</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

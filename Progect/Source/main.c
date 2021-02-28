@@ -20,6 +20,7 @@
 #include "printf_dbg.h"
 #include "cmd_process.h"
 #include "pin_dbg.h"
+#include "pulse_drv.h"
 #include <stdio.h>
 
 volatile const char __version__[] = "PULSE_BOARD";    
@@ -44,7 +45,6 @@ void system_thread(void *arg)
 { 
 	//Подключение интерфейса отладки
 	DBG_Hardware_Setup();
-
 	//Подключения для отладки GPIO 
 	DBG_PIN_Setup();	
 
@@ -63,6 +63,9 @@ void system_thread(void *arg)
 	/* Запуск задачи контроля платы */
 	xTaskCreate(board_task, "BOARD", configMINIMAL_STACK_SIZE, NULL, TreadPrioNormal, NULL);
   
+	/* Configures GPIO / Timer.*/
+	Pulse_Init();
+	
 	// Initialise the xLastWakeTime variable with the current time.
 	TickType_t xLastWakeTime;
 	const TickType_t xFrequency = 1000;  	
@@ -77,6 +80,10 @@ void system_thread(void *arg)
 
 int main(void)
 {
+	/* Обновление переменных тактирование по состоянию регистров тактирования    */
+	SystemCoreClockUpdate();
+	/* Настройка групп приоритеов все 4 бита для управления приоритетом, 0 бит для подприоритета */
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);	
 	/* Init thread */
 	xTaskCreate(system_thread, (const char*)"SysTask", configMINIMAL_STACK_SIZE, NULL, TreadPrioNormal, NULL);
 	/* Start scheduler */
