@@ -22,6 +22,7 @@
 #include "pin_dbg.h"
 #include "indic_drv.h"
 #include "pulse_drv.h"
+#include "eeprom_drv.h"
 #include <stdio.h>
 
 volatile const char __version__[] = "PULSE_BOARD";    
@@ -64,6 +65,9 @@ void system_thread(void *arg)
 	/* Запуск задачи контроля платы */
 	xTaskCreate(board_task, "BOARD", configMINIMAL_STACK_SIZE, NULL, TreadPrioNormal, NULL);
   
+	/*  Инициализация емулятора eeprom. */
+	Em_EEPROM_Init();	
+	
 	/* Configures Indic.*/
 	Indic_Init();	
 	

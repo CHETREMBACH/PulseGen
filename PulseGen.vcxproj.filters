@@ -88,6 +88,15 @@
     <Filter Include="Utilities\indic_drv">
       <UniqueIdentifier>{dafaa0a6-da3b-4802-9f8d-b0f0ea6923ea}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Libraries\EEPROM_Emul">
+      <UniqueIdentifier>{3cca8846-fcca-4f58-af45-96e48579eebd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\EEPROM_Emul\Core">
+      <UniqueIdentifier>{006809a5-3eff-4a18-a07c-dabc0d4a56bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\eeprom_drv">
+      <UniqueIdentifier>{058d66ba-8bb2-4291-88e5-9d7e393bd2bd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="stm32.xml">
@@ -298,6 +307,24 @@
     <ClInclude Include="Utilities\indic_drv\indic_drv.h">
       <Filter>Utilities\indic_drv</Filter>
     </ClInclude>
+    <ClInclude Include="Libraries\EEPROM_Emul\Core\eeprom_emul.h">
+      <Filter>Libraries\EEPROM_Emul\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\EEPROM_Emul\Core\eeprom_emul_conf_template.h">
+      <Filter>Libraries\EEPROM_Emul\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\EEPROM_Emul\Core\eeprom_emul_types.h">
+      <Filter>Libraries\EEPROM_Emul\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Progect\Config\eeprom_emul_conf.h">
+      <Filter>Progect\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\eeprom_drv\eeprom_drv.h">
+      <Filter>Utilities\eeprom_drv</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\eeprom_drv\flash_interface.h">
+      <Filter>Utilities\eeprom_drv</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Progect\Source\main.c">
@@ -431,6 +458,15 @@
     </ClCompile>
     <ClCompile Include="Utilities\indic_drv\indic_drv.c">
       <Filter>Utilities\indic_drv</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\EEPROM_Emul\Core\eeprom_emul.c">
+      <Filter>Libraries\EEPROM_Emul\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\eeprom_drv\eeprom_drv.c">
+      <Filter>Utilities\eeprom_drv</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\eeprom_drv\flash_interface.c">
+      <Filter>Utilities\eeprom_drv</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
