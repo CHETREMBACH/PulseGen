@@ -41,7 +41,6 @@
   */
 
 /* Page definitions */
-#define FLASH_BANK_SIZE         ((uint32_t)0x00000400) 
 #define PAGE_SIZE               FLASH_PAGE_SIZE                                  /*!< Page size */
 #define PAGE_HEADER_SIZE        EE_ELEMENT_SIZE * 4U                             /*!< Page Header is 4 elements to save page state */
 #define NB_MAX_ELEMENTS_BY_PAGE ((PAGE_SIZE - PAGE_HEADER_SIZE) / EE_ELEMENT_SIZE) /*!< Max number of elements by page */

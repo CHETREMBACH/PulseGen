@@ -78,7 +78,7 @@ EE_Status FI_PageErase(uint32_t Page, uint16_t NbPages)
 	
 	for (uint32_t cntic = 0; cntic < NbPages; cntic++)	
 	{
-		if (FLASH_ErasePage( (Page + cntic) * FLASH_BANK_SIZE) != FLASH_COMPLETE) 
+		if (FLASH_ErasePage((Page + cntic) * FLASH_PAGE_SIZE) != FLASH_COMPLETE) 
 		{
 			return EE_ERASE_ERROR;
 		}

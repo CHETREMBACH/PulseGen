@@ -138,6 +138,7 @@ __IO uint32_t AddressRead = 0;
 /* Flag equal to 1 when the cleanup phase is in progress, 0 if not */
 __IO uint8_t CleanupPhase = 0;
 
+
 /**
   * @}
   */
@@ -869,67 +870,67 @@ EE_Status EE_CleanUp(void)
   return EE_ERROR_NOERASING_PAGE;
 }
 
-///**
-//  * @brief  Erase group of pages which are erasing state, in IT mode.
-//  *         Could be either first half or second half of total pages number.
-//  * @note   This function should be called when EE_WriteVariableXXbits has
-//  *         returned EE_CLEANUP_REQUIRED status (and only in that case)
-//  * @retval EE_Status
-//  *           - EE_OK: in case of success
-//  *           - EE error code: if an error occurs
-//  */
-//EE_Status EE_CleanUp_IT(void)
-//{
-//  uint32_t firstpage = 0U, page = 0U;
-//  uint32_t firstpageaddress = 0U, pageaddress = 0U;
-//  EE_State_type firstpagestatus = STATE_PAGE_INVALID, pagestatus = STATE_PAGE_INVALID;
-//
-//  /* Check first half and second half page group */
-//  for (firstpage = START_PAGE; firstpage < (START_PAGE + PAGES_NUMBER); firstpage += (PAGES_NUMBER / 2U))
-//  {
-//    /* Check status of first page of the group */
-//    firstpageaddress = PAGE_ADDRESS(firstpage);
-//    firstpagestatus = GetPageState(firstpageaddress);
-//
-//    /* If first page of the group is erasing state, check that all other pages
-//    of the group are also erasing state */
-//    if (firstpagestatus == STATE_PAGE_ERASING)
-//    {
-//      for (page = (firstpage + 1U); page < (firstpage + (PAGES_NUMBER / 2U)); page++)
-//      {
-//        pageaddress = PAGE_ADDRESS(page);
-//        pagestatus = GetPageState(pageaddress);
-//
-//        /* If page is not erasing, return error */
-//        if (pagestatus != STATE_PAGE_ERASING)
-//        {
-//          return EE_ERROR_NOERASING_PAGE;
-//        }
-//      }
-//
-//      #ifdef DUALCORE_FLASH_SHARING
-//      /* Inform CPU2 about Erase Activity */
-//      SHCI_C2_FLASH_EraseActivity(ERASE_ACTIVITY_ON);
-//      #endif
-//      
-//      /* Erase all the pages of the group */
-//      /* If erase operation fails, a Flash error code is returned */
-//      if (FI_PageErase_IT(firstpage, PAGES_NUMBER / 2U) != EE_OK)
-//      {
-//        return EE_ERASE_ERROR;
-//      }
-//      else
-//      {
-//        /* To keep their coherency, flush the caches if needed depending on the product */
-//        FI_CacheFlush();
-//        return EE_OK;
-//      }
-//    }
-//  }
-//
-//  /* Error if no erasing pages group is found */
-//  return EE_ERROR_NOERASING_PAGE;
-//}
+/**
+  * @brief  Erase group of pages which are erasing state, in IT mode.
+  *         Could be either first half or second half of total pages number.
+  * @note   This function should be called when EE_WriteVariableXXbits has
+  *         returned EE_CLEANUP_REQUIRED status (and only in that case)
+  * @retval EE_Status
+  *           - EE_OK: in case of success
+  *           - EE error code: if an error occurs
+  */
+EE_Status EE_CleanUp_IT(void)
+{
+  uint32_t firstpage = 0U, page = 0U;
+  uint32_t firstpageaddress = 0U, pageaddress = 0U;
+  EE_State_type firstpagestatus = STATE_PAGE_INVALID, pagestatus = STATE_PAGE_INVALID;
+
+  /* Check first half and second half page group */
+  for (firstpage = START_PAGE; firstpage < (START_PAGE + PAGES_NUMBER); firstpage += (PAGES_NUMBER / 2U))
+  {
+    /* Check status of first page of the group */
+    firstpageaddress = PAGE_ADDRESS(firstpage);
+    firstpagestatus = GetPageState(firstpageaddress);
+
+    /* If first page of the group is erasing state, check that all other pages
+    of the group are also erasing state */
+    if (firstpagestatus == STATE_PAGE_ERASING)
+    {
+      for (page = (firstpage + 1U); page < (firstpage + (PAGES_NUMBER / 2U)); page++)
+      {
+        pageaddress = PAGE_ADDRESS(page);
+        pagestatus = GetPageState(pageaddress);
+
+        /* If page is not erasing, return error */
+        if (pagestatus != STATE_PAGE_ERASING)
+        {
+          return EE_ERROR_NOERASING_PAGE;
+        }
+      }
+
+      #ifdef DUALCORE_FLASH_SHARING
+      /* Inform CPU2 about Erase Activity */
+      SHCI_C2_FLASH_EraseActivity(ERASE_ACTIVITY_ON);
+      #endif
+      
+      /* Erase all the pages of the group */
+      /* If erase operation fails, a Flash error code is returned */
+      if (FI_PageErase_IT(firstpage, PAGES_NUMBER / 2U) != EE_OK)
+      {
+        return EE_ERASE_ERROR;
+      }
+      else
+      {
+        /* To keep their coherency, flush the caches if needed depending on the product */
+        FI_CacheFlush();
+        return EE_OK;
+      }
+    }
+  }
+
+  /* Error if no erasing pages group is found */
+  return EE_ERROR_NOERASING_PAGE;
+}
 
 /**
   * @brief  Delete corrupted Flash address, can be called under NMI.
