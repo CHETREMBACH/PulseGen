@@ -62,6 +62,7 @@ void DBG_UART_Setup(void)
   
   /* Enable the USART Interrupt */
   NVIC_InitStructure.NVIC_IRQChannel = DBG_IRQn;
+  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 6;	
   NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStructure);  

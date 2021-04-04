@@ -102,12 +102,10 @@
     <None Include="stm32.props">
       <Filter>VisualGDB settings</Filter>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="PulseGen-Release.vgdbsettings">
+    <None Include="pattern-Debug.vgdbsettings">
       <Filter>VisualGDB settings</Filter>
     </None>
-    <None Include="PulseGen-Debug.vgdbsettings">
+    <None Include="pattern-Release.vgdbsettings">
       <Filter>VisualGDB settings</Filter>
     </None>
   </ItemGroup>

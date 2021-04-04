@@ -29,17 +29,18 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
-#define T1_CLK     	         RCC_APB2Periph_GPIOC
-#define T1_PIN               GPIO_Pin_13
-#define T1_PORT              GPIOC  
-#define T1_HI                GPIO_SetBits(T1_PORT,T1_PIN)
-#define T1_LO                GPIO_ResetBits(T1_PORT,T1_PIN)
+#define T1_CLK     	         RCC_APB2Periph_GPIOB
+#define T1_PIN               GPIO_Pin_12
+#define T1_PORT              GPIOB  
+#define T1_HI                T1_PORT->BSRR = T1_PIN
+#define T1_LO                T1_PORT->BRR = T1_PIN
 	
-#define T2_CLK             	 RCC_APB2Periph_GPIOC
-#define T2_PIN               GPIO_Pin_13
-#define T2_PORT              GPIOC  
-#define T2_HI                GPIO_SetBits(T2_PORT,T2_PIN)
-#define T2_LO                GPIO_ResetBits(T2_PORT,T2_PIN)
+
+//#define T2_CLK               RCC_APB2Periph_GPIOC
+//#define T2_PIN               GPIO_Pin_13
+//#define T2_PORT              GPIOC  
+//#define T2_HI                T2_PORT->BSRR = T2_PIN
+//#define T2_LO                T2_PORT->BRR = T2_PIN
 	
 /**
   * @brief  Инициализация GPIO для отладки.

@@ -15,7 +15,7 @@
     <ProjectGuid>{A85EC7BA-07DB-4856-9106-0D624F5BC50A}</ProjectGuid>
     <BSP_ID>com.sysprogs.arm.stm32</BSP_ID>
     <BSP_VERSION>2020.10</BSP_VERSION>
-    <ProjectName>PulseGen</ProjectName>
+    <ProjectName>pattern</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
@@ -168,9 +168,9 @@
     <ClInclude Include="Utilities\uart_dbg\pin_dbg.h" />
     <ClInclude Include="Utilities\uart_dbg\printf_dbg.h" />
     <ClInclude Include="Utilities\uart_dbg\uart_dbg.h" />
+    <None Include="pattern-Debug.vgdbsettings" />
+    <None Include="pattern-Release.vgdbsettings" />
     <None Include="stm32.props" />
-    <None Include="PulseGen-Debug.vgdbsettings" />
-    <None Include="PulseGen-Release.vgdbsettings" />
     <None Include="stm32.xml" />
   </ItemGroup>
 </Project>
